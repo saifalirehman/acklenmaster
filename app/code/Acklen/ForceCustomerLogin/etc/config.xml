@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <forcecustomerlogin>
+            <general>
+                <enable>1</enable>
+                <disable_register>0</disable_register>
+            </general>
+            <page>
+                <enable>1</enable>
+                <message>You need login to access this page</message>
+                <product_page>1</product_page>
+                <category_page>0</category_page>
+                <cart_page>0</cart_page>
+                <checkout_page>0</checkout_page>
+            </page>
+        </forcecustomerlogin>
+    </default>
+</config>

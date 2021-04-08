@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Controller\Product\View">
+        <plugin name="acklen_productpage_login" sortOrder="10" type="Acklen\ForceCustomerLogin\Plugin\Product\View"/>
+    </type>
+    <type name="Magento\Catalog\Controller\Category\View">
+        <plugin name="acklen_categorypage_login" sortOrder="10" type="Acklen\ForceCustomerLogin\Plugin\Category\View"/>
+    </type>
+    <type name="Magento\Checkout\Controller\Cart\Index">
+        <plugin name="acklen_cart_login" sortOrder="10" type="Acklen\ForceCustomerLogin\Plugin\Cart\Index"/>
+    </type>
+    <preference for="Magento\Customer\Controller\Account\Login" type="Acklen\ForceCustomerLogin\Controller\Account\Login" />
+    <preference for="Magento\Customer\Block\Account\RegisterLink" type="Acklen\ForceCustomerLogin\Block\Account\RegisterLink" />
+</config>
