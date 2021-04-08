@@ -1,0 +1,20 @@
+<?php
+$dataPostParam = '';
+$enable = $block->getEnable();
+$enableRegister = $block->getEnableRegister();
+if ($block->isLoggedIn()) {
+    $dataPostParam = sprintf(" data-post='%s'", $block->getPostParams());
+}
+?>
+<li class="authorization-link" 
+	data-label="<?php 
+	if ($enableRegister && $enable): 
+
+	else:
+		echo $block->escapeHtml(__('or'));
+	endif;
+	?>">
+    <a <?php /* @escapeNotVerified */ echo $block->getLinkAttributes(); ?><?php /* @escapeNotVerified */ echo $dataPostParam; ?>>
+        <?php echo $block->escapeHtml($block->getLabel()); ?>
+    </a>
+</li>
